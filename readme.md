@@ -1,0 +1,1 @@
+# WordPress Docker Image with WP-CLI
