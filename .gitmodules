@@ -1,0 +1,6 @@
+[submodule "themes/sweat-off-by-hand"]
+	path = themes/sweat-off-by-hand
+	url = git@github.com:Clickadelic/sweat-off-by-hand.git
+[submodule "themes/sweat-off-theme"]
+	path = themes/sweat-off-theme
+	url = git@github.com:Clickadelic/sweat-off-base.git
