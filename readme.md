@@ -1,12 +1,39 @@
 ## WordPress Docker Image with WP-CLI
 
-This is a WordPress Docker-Image in order to develop WordPress Plugins and Themes.
+This is a WordPress Docker environment for developing WordPress themes.
 
-Usage:
+## Setup
 
-1. Clone this repository
-2. Open your terminal in this folder
-3. Rename env.template to .env
-4. Enter `docker-compose up -d` to start the docker image
-5. Load the image, install WordPress
-6. Have fun
+1. Clone this repository and enter the folder
+   ```bash
+   git clone git@github.com:Clickadelic/sweat-off.git
+   cd sweat-off
+   ```
+2. Copy the env template
+   ```bash
+   cp .env.template .env
+   ```
+3. Clone the theme repos into `themes/`
+   ```bash
+   git clone git@github.com:Clickadelic/sweat-off-base.git themes/sweat-off-theme
+   git clone git@github.com:Clickadelic/sweat-off-by-hand.git themes/sweat-off-by-hand
+   ```
+4. Start the Docker environment
+   ```bash
+   docker-compose up -d
+   ```
+5. Open http://localhost:8080 and complete the WordPress install
+
+## Theme development workflow
+
+The `themes/` directory is gitignored in this repo — the two theme repos are fully independent.
+Commit and push changes freely inside either theme folder without ever touching this repo.
+
+```bash
+cd themes/sweat-off-theme   # or sweat-off-by-hand
+git add .
+git commit -m "your message"
+git push
+```
+
+This repo (`sweat-off`) only manages the Docker environment. Theme changes never affect it.
