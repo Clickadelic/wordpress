@@ -1,4 +1,7 @@
 .vscode
 plugins/*
 themes/*
+!themes/sweat-off-parent
+!themes/sweat-off-child
+!themes/sweat-off-by-hand
 wordpress/*
