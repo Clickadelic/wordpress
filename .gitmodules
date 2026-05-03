@@ -6,7 +6,7 @@
 	path = themes/sweat-off-child
 	url = git@github.com:Clickadelic/sweat-off-child.git
 	ignore = all
-[submodule "themes/sweat-off-by-hand"]
-	path = themes/sweat-off-by-hand
-	url = git@github.com:Clickadelic/sweat-off-by-hand.git
+[submodule "themes/sweat-off-sage"]
+	path = themes/sweat-off-sage
+	url = git@github.com:Clickadelic/sweat-off-sage.git
 	ignore = all
