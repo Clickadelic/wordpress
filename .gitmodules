@@ -1,12 +1,8 @@
-[submodule "themes/sweat-off-parent"]
-	path = themes/sweat-off-parent
-	url = git@github.com:Clickadelic/sweat-off-parent.git
+[submodule "themes/generic-parent"]
+	path = themes/generic-parent
+	url = git@github.com:Clickadelic/generic-parent.git
 	ignore = all
-[submodule "themes/sweat-off-child"]
-	path = themes/sweat-off-child
-	url = git@github.com:Clickadelic/sweat-off-child.git
-	ignore = all
-[submodule "themes/sweat-off-sage"]
-	path = themes/sweat-off-sage
-	url = git@github.com:Clickadelic/sweat-off-sage.git
+[submodule "themes/generic-child"]
+	path = themes/generic-child
+	url = git@github.com:Clickadelic/generic-child.git
 	ignore = all
