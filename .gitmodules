@@ -6,3 +6,7 @@
 	path = themes/generic-child
 	url = git@github.com:Clickadelic/generic-child.git
 	ignore = all
+[submodule "plugins/generic-plugin"]
+	path = plugins/generic-plugin
+	url = git@github.com:Clickadelic/generic-plugin.git
+	ignore = all
