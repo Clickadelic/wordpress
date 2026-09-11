@@ -45,8 +45,16 @@ services:
         container_name: wordpress_cli
         depends_on:
             - wordpress
+            - db
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: wordpress_user
+            WORDPRESS_DB_PASSWORD: wordpress_password
+            WORDPRESS_DB_NAME: wordpress_db
         volumes:
             - ./wordpress:/var/www/html
+            - ./plugins:/var/www/html/wp-content/plugins
+            - ./themes:/var/www/html/wp-content/themes
         working_dir: /var/www/html
         entrypoint: ["wp"]
 
