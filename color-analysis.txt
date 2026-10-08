@@ -1,0 +1,6 @@
+There isn’t one consistent source of truth right now; color values are duplicated across the Customizer, the header, CSS, and theme.json.
+
+Runtime brand colors: generic_parent_brand() reads the generic_parent_brand option, with defaults of primary #fe5000 and background #ffffff. header.php uses that helper for the navigation’s --color-primary.
+Customizer mismatch: The primary-color control in CustomizerServiceProvider.php saves to generic_parent[primary_color], but the helper reads generic_parent_brand. So changing that Customizer control won’t update the header’s primary color. The background setting does use generic_parent_brand, but the header’s background variable is commented out.
+Separate static colors: app.css sets --color-primary to #e73b37, while theme.json hard-codes button colors and other styles. Its palette references --color--primary (double hyphen), which doesn’t match the CSS variable --color-primary.
+Bottom line: The helper-backed generic_parent_brand option is the apparent intended source for configurable brand colors, but the primary Customizer setting is wired to a different option. Static CSS and theme.json colors are additional sources, with conflicting values.
