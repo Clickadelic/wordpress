@@ -1,0 +1,1 @@
+docker compose run --rm wpcli i18n make-pot /var/www/html/wp-content/plugins/generic-plugin /var/www/html/wp-content/plugins/generic-plugin/languages/generic-plugin.pot --domain=generic-plugin
