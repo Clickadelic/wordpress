@@ -1,0 +1,31 @@
+
+# Menü Punkte
+
+Um die Reihenfolge der Menüpunkte zu änder, folgende Dinge ändern.
+
+Aktuell ist der Menüpunkt unter "Einstellungen" - add_options_page eingeordnet.
+
+## Ersetze add_theme_page() durch add_options_page() in deiner AdminPage-Klasse:
+public function addMenu(): void
+{
+    add_options_page(
+        __('Theme Setup', 'generic-parent'),
+        __('Theme Setup', 'generic-parent'),
+        'install_plugins',
+        self::MENU_SLUG,
+        $this->render(...),
+    );
+}
+
+
+Passe außerdem die beiden URLs von themes.php auf options-general.php an:
+
+In activationNotice():
+'url' => admin_url('options-general.php?page=' . self::MENU_SLUG),
+
+
+In redirect():
+admin_url('options-general.php')
+
+
+Damit erscheint Theme Setup unter Einstellungen statt unter Design. Deine bestehende Installationslogik bleibt unverändert.
